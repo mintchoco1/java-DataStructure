@@ -1,4 +1,4 @@
-package example;
+package generic.example;
 
 public class GameEntry {
     private String name;

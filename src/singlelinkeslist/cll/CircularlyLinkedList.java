@@ -1,8 +1,8 @@
-package singlelinkeslist;
+package singlelinkeslist.cll;
 
 public class CircularlyLinkedList<E> {
     private static class Node<E> {
-        private E element;    //노드가 저장하는 데이터
+        private E element;
         private CircularlyLinkedList.Node<E> next; //다음 노드를 가리키는 참조
 
         public Node(E e, CircularlyLinkedList.Node<E> n) {

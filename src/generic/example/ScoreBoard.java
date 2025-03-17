@@ -1,4 +1,4 @@
-package example;
+package generic.example;
 
 //점수를 내림 차순으로 정렬하고 저장한다고 가정
 public class ScoreBoard {
