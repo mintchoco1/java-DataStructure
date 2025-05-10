@@ -93,12 +93,18 @@ public class PositionalListExercise {
 
     // TODO: Iterator 객체로 리스트 출력
     public static void printListWithIterator(PositionalList<Person> list) {
-        // ...
+        Iterator<Person> it = list.iterator();
+        while (it.hasNext()) {
+            Person p = it.next();
+            System.out.println(p);
+        }
     }
 
     // TODO: for-each 구문으로 리스트 출력
     public static void printListWithForEach(PositionalList<Person> list) {
-        // ...
+        for (Person person : list){
+            System.out.println(person);
+        }
     }
 
     public static void ex3() {
@@ -122,6 +128,14 @@ public class PositionalListExercise {
 
     // TODO: 이름이 name인 Person들을 모두 삭제
     public static void removeAllByName(PositionalList<Person> list, String name) {
-        // ...
+        Position<Person> current = list.first();
+        while (current != null) {
+            Position<Person> next = list.after(current); //다음 위치 먼저 저장
+            Person person = current.getElement();
+            if (current.getElement().getName().equals(name)) {
+                list.remove(current);//현재 위치 삭제
+            }
+            current = next;//다음으로 이동
+        }
     }
 }
