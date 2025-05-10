@@ -18,7 +18,7 @@ public interface Position<E> {
      */
     E getElement() throws IllegalStateException;
 
-    /*static void printSignature() {
+    /*tatic void printSignature() {
         System.out.println("Using Extended PositionalList v1.1");
         System.out.println("Java version: " + System.getProperty("java.version"));
         System.out.println("OS: " + System.getProperty("os.name") + " " + System.getProperty("os.version"));

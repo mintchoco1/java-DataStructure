@@ -5,6 +5,7 @@ public class PositionalListExercise {
         ex1();
         ex2();
         ex3();
+        ex4();
         //PositionalList.printSignature();  // Part 2에서 추가 
     }
 
@@ -138,4 +139,68 @@ public class PositionalListExercise {
             current = next;//다음으로 이동
         }
     }
+
+    //============================추가 구현 test=============================//
+    public static class ExamScore {
+        private String subjectName;
+        private int period;
+        private int score;
+        private int myScore;
+
+        public ExamScore(String subjectName, int period, int score, int myScore) {
+            this.subjectName = subjectName;
+            this.period = period;
+            this.score = score;
+            this.myScore = myScore;
+        }
+        public String getSubjectName() {
+            return subjectName;
+        }
+        public int getPeriod() {
+            return period;
+        }
+        public int getScore() {
+            return score;
+        }
+        public int getMyScore() {
+            return myScore;
+        }
+        public String toString() {
+            return "[과목: " + subjectName + ", " + period + "교시, 만점: " + score + ", 내 점수: " + myScore + "]";
+        }
+    }
+    public static void ex4(){
+        System.out.println("========== ex4 ========");
+        PositionalList<ExamScore> examscores = new LinkedPositionalList<>();
+        examscores.addLast(new ExamScore("국어", 1, 100, 88));
+        examscores.addLast(new ExamScore("수학", 2, 100, 92));
+        examscores.addLast(new ExamScore("영어", 3, 100, 95));
+        examscores.addLast(new ExamScore("한국사", 4, 50, 50));
+        examscores.addLast(new ExamScore("탐구", 5, 50, 45));
+        examscores.addLast(new ExamScore("수학", 2, 100, 100));
+
+        System.out.println("== 삭제 전 점수 목록 ==");
+        for (ExamScore s : examscores) {
+            System.out.println(s);
+        }
+
+        removeAllBySubject(examscores, "수학");
+
+        System.out.println("\n== '수학' 삭제 후 점수 목록 ==");
+        for (ExamScore s : examscores) {
+            System.out.println(s);
+        }
+    }
+    public static void removeAllBySubject(PositionalList<ExamScore> list2, String name){
+        Position<ExamScore> current = list2.first();
+        while (current != null){
+            Position<ExamScore> next = list2.after(current);
+            ExamScore subject = current.getElement();
+            if(subject.getSubjectName().equals(name)){
+                list2.remove(current);
+            }
+            current = next;
+        }
+    }
+    //============================추가 구현 test=============================//
 }
