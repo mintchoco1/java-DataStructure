@@ -45,8 +45,8 @@ public class PositionalListExercise {
         System.out.println("After set(p, 7): " + list);
 
         // 다음 두 줄을 주석 해제하고 실행 시 어떤 예외가 발생하는지 설명하시오.
-        // list.remove(q);
-        // System.out.println("After remove(q): " + list);
+        //list.remove(q);
+        //System.out.println("After remove(q): " + list);
 
         System.out.println("Final state: " + list);
         System.out.println("");
@@ -84,7 +84,11 @@ public class PositionalListExercise {
 
     // TODO: Position 기반 순회로 리스트 출력
     public static void printList(PositionalList<Person> list) {
-        // ...
+        Position<Person> current = list.first();
+        while (current != null) {
+            System.out.println(current.getElement());
+            current = list.after(current);
+        }
     }
 
     // TODO: Iterator 객체로 리스트 출력
