@@ -18,12 +18,12 @@ public interface Position<E> {
      */
     E getElement() throws IllegalStateException;
 
-    static void printSignature() {
+    /*static void printSignature() {
         System.out.println("Using Extended PositionalList v1.1");
         System.out.println("Java version: " + System.getProperty("java.version"));
         System.out.println("OS: " + System.getProperty("os.name") + " " + System.getProperty("os.version"));
         System.out.println("User: " + System.getProperty("user.name"));
         System.out.println("Working dir: " + System.getProperty("user.dir"));
         System.out.println("Executed at: " + java.time.LocalDateTime.now());
-    }
+    }*/
 }

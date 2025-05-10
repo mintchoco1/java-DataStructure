@@ -1,5 +1,18 @@
-public interface Person {
-    public boolean equals(Person other);   // is this the same person?
-    public String getName();               // get this person's name
-    public int getAge();                   // get this person's age
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() { return name; }
+
+    public int getAge() { return age; }
+
+    @Override
+    public String toString() {
+        return name + " (" + age + ")";
+    }
 }
