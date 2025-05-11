@@ -76,7 +76,7 @@ public class PositionalListExercise {
         System.out.println("========== ex2 ========");
         PositionalList<Person> list = makeSamplePersonList();
 
-        System.out.println("=== Using com.zybooks.dsaj.util.Position-based print ===");
+        System.out.println("=== Position-based print ===");
         printList(list);  // TODO: 직접 구현
 
         System.out.println("\n=== Using Iterator ===");
@@ -87,7 +87,7 @@ public class PositionalListExercise {
         System.out.println("");
     }
 
-    // TODO: com.zybooks.dsaj.util.Position 기반 순회로 리스트 출력
+    // TODO: Position 기반 순회로 리스트 출력
     public static void printList(PositionalList<Person> list) {
         Position<Person> current = list.first();
         while (current != null) {
