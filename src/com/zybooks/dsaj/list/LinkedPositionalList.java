@@ -1,3 +1,7 @@
+package com.zybooks.dsaj.list;
+
+import com.zybooks.dsaj.util.Position;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -188,7 +192,7 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
     }
 
     /**
-     * Returns the Position immediately after Position p.
+     * Returns the Position immediately after .Position p.
      * @param p   a Position of the list
      * @return the Position of the following element (or null, if p is last)
      * @throws IllegalArgumentException if p is not a valid position for this list

@@ -1,3 +1,7 @@
+import com.zybooks.dsaj.list.LinkedPositionalList;
+import com.zybooks.dsaj.list.PositionalList;
+import com.zybooks.dsaj.util.Position;
+
 import java.util.Iterator;
 
 public class PositionalListExercise {
@@ -6,7 +10,7 @@ public class PositionalListExercise {
         ex2();
         ex3();
         ex4();
-        //PositionalList.printSignature();  // Part 2에서 추가 
+        PositionalList.printSignature();  // Part 2에서 추가
     }
 
     public static void ex1() {
@@ -72,7 +76,7 @@ public class PositionalListExercise {
         System.out.println("========== ex2 ========");
         PositionalList<Person> list = makeSamplePersonList();
 
-        System.out.println("=== Using Position-based print ===");
+        System.out.println("=== Using com.zybooks.dsaj.util.Position-based print ===");
         printList(list);  // TODO: 직접 구현
 
         System.out.println("\n=== Using Iterator ===");
@@ -83,7 +87,7 @@ public class PositionalListExercise {
         System.out.println("");
     }
 
-    // TODO: Position 기반 순회로 리스트 출력
+    // TODO: com.zybooks.dsaj.util.Position 기반 순회로 리스트 출력
     public static void printList(PositionalList<Person> list) {
         Position<Person> current = list.first();
         while (current != null) {
