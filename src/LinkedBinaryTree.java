@@ -14,7 +14,6 @@ public abstract class LinkedBinaryTree<E> extends AbstractBinaryTree<E>{
             left = leftChild;
             right = rightChild;
         }
-
         public E getElement() {
             return element;
         }
